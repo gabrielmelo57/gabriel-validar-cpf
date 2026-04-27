@@ -1,0 +1,20 @@
+Exercício - Desenvolver um aplicativo que leia um CPF e após a sua validação exiba na tela:
+CPF válido! ou
+CPF inválido!
+
+Código em Python:
+
+cpf = int(input("Digite o CPF sem pontos e hífens: "))
+
+if cpf > 99999999999 or cpf < 10000000000:
+    print("CPF inválido!")
+else:
+    print("CPF válido!")
+
+
+int(input()) = pede para você digitar o cpf (input) e guarda a resposta como número inteiro (int)
+
+se o cpf for maior que 99999999999 (maior cpf possível) ou menor que 10000000000 (menor cpf) possível, o programa irá exibir (print) que o cpf é inválido, se não (else) estiver fora da delimitação, será exibido que o cpf é válido.
+
+ex: o cpf 123.123.123-12, você irá digitar 12312312312, por ser maior que 10000000000 (100.000.000-00), o programa irá validar.
+caso digite um número a menos ou a mais, será inválido.

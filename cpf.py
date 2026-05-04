@@ -2,11 +2,14 @@
 #   CPF válido! ou
 #   CPF inválido!
 
-cpf = int(input("Digite o CPF sem pontos e hífens: "))
 
-if cpf > 99999999999 or cpf < 10000000000:
-    print("CPF inválido!")
+from validate_docbr import CPF
+
+cpf = input("Digite o CPF (com ou sem pontos): ")
+
+validador = CPF()
+
+if validador.validate(cpf):
+    print("CPF válido")
 else:
-    print("CPF válido!")
-
-
+    print("CPF inválido")
